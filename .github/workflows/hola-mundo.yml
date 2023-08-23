@@ -1,0 +1,20 @@
+name: holaMundo
+run-name: estoy aprendiendo github actions
+on: 
+    push: 
+        branches:
+            - aprendiendo-github-actions
+jobs:
+    hola_mundo:
+        name: Imprimir hola mundo
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v3
+
+          - name: Definir variable
+            run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+
+          - name: Correr script
+            run: ./python hola_mundo.py
+    
