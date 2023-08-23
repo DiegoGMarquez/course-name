@@ -1,12 +1,8 @@
 name: holaMundo
 run-name: estoy aprendiendo github actions
-on: 
-    push: 
-        branches:
-            - aprendiendo-github-actions
+on: [push]
 jobs:
     hola_mundo:
-        name: Imprimir hola mundo
         runs-on: ubuntu-latest
         steps:
           - name: Checkout
